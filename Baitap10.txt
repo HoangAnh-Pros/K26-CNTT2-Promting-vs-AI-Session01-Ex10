@@ -1,0 +1,18 @@
+Bài 10: Tính toán Chi phí API Doanh nghiệp & Enterprise Security
+Vấn đề : Phòng Marketing MartX dự định chạy chiến dịch tự động gửi 50.000 tin nhắn Zalo cá nhân hóa.
+Yêu cầu :  - Lập Bảng tính chi phí chi tiết 
+           - Thiết kế Hạ tầng Enterprise API Gateway
+Giải quyết bài toán : 
+Phần 1 : Bảng Tính chi phí và lệnh ngân sách
+- Hệ số quy đổi token (2.5)
++ IP : 50000 x (200 x 2.5) = 25000000 tokens ( 25 M )
++ OP : 50000 x (100 x2.5) = 12500000 tokens ( 12.5M )
+- Chi phí sử dụng của GPT-4o
++ IP : 25 x $2.50 = $62.50
++ OP : 12.5 x $10.00 = $125.00
+==> Tổng = IP + OP = $187.50 ( 4.678.500 VNĐ ) với $1 = 25.000 VNĐ
+==> Số tiền Marketing tính thiếu : ước tính 937.500VNĐ --> Thiếu 3.750.000 VNĐ 
+Phần 2 : Thiết kế Hạ tầng Enterprise API Gateway
+- Bảo mật : tài khoản , thông tin các nhân và dữ liệu khác hàng để train AI -- vi phạm bảo mật
+- Zero Data Retention : Enterprise API cam kết không lưu dữ liệu và không dùng data khác hàng để train AI
+- Giới hạn & Ổn định : Tránh bị khóa tài khoản khi chạy tự động số lượng lớn.
